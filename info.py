@@ -32,7 +32,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jinto4638:jinto4638@cluster0.cc7bx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jinto4638:jinto4638@cluster0.cc7bx.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
@@ -43,16 +43,7 @@ P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", None)
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b> {file_name}
-{file_size}
-
-╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═════╗
-♻️ 𝙅𝙊𝙄𝙉 :-@JNS_BOTS  ❤️‍🔥    ♻️
-♻️ 𝙅𝙊𝙄𝙉 :-@JNS_MOVIES❤️‍🩹  ♻️
-╚══╦═ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ═════╝
-╭══╩══╮                 ╭═════╮
-╏ [ᶜʰᵃⁿⁿᵉˡ¹](https://t.me/JNS_MOVIE_BOT_updates)╠══════╣[ᶜʰᵃⁿⁿᵉˡ ²](https://t.me/Fcfilmcornerfc) ┃              
-╰═════╯                 ╰═════╯</b>")
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>{file_name}</b>")
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Hey {message.from_user.mention}, </b>
 
 Here is the result for your <b> {query}</b>

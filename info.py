@@ -44,7 +44,7 @@ IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", None)
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", "<b>{file_name}</b>")
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Hey {message.from_user.mention}, </b>
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", """<b>Hey {message.from_user.mention}, </b>
 
 Here is the result for your <b> {query}</b>
 
@@ -57,7 +57,7 @@ Here is the result for your <b> {query}</b>
 📆 <b>Release Info :</b> {release_date}
 🎛 <b>Countries :</b> <code>{countries}</code>
 
-Powered By {message.chat.title}")
+Powered By {message.chat.title}""")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "True"), True)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
